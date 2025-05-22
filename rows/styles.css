@@ -1,0 +1,65 @@
+body {
+  font-family: system-ui;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  
+  /* EJEMPLOS DE GRID-TEMPLATE-COLUMNS */
+  /* Mantenemos activo un ejemplo de columnas */
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  /* EJEMPLOS DE GRID-TEMPLATE-ROWS */
+  
+  /* 1. Usando valores fijos */
+  /* grid-template-rows: 50px 100px 50px 100px; */
+  
+  /* 2. Usando fracciones (fr) - distribuyen el espacio disponible */
+  /* grid-template-rows: 1fr 2fr 1fr; */
+  
+  /* 3. Unidades mixtas */
+  /* grid-template-rows: 80px 1fr 2fr auto; */
+  
+  /* 4. Usando porcentajes (requiere altura del contenedor) */
+  /* height: 500px; */
+  /* grid-template-rows: 20% 60% 20%; */
+  
+  /* 5. Con la función repeat para patrones repetitivos */
+  /* grid-template-rows: repeat(4, 80px); */
+  /* grid-template-rows: repeat(2, 50px 100px); */ /* Repite el patrón 50px 100px dos veces */
+  
+  /* 6. Con minmax() para tamaños responsivos */
+  /* grid-template-rows: minmax(50px, auto) minmax(100px, 200px) minmax(50px, auto); */
+  
+  /* 7. Con auto para filas que se ajustan al contenido */
+  /* grid-template-rows: auto auto auto; */
+  
+  /* 8. Con auto-fit/auto-fill (menos común en filas pero posible) */
+  /* height: 500px; */
+  /* grid-template-rows: repeat(auto-fill, minmax(80px, 1fr)); */
+  
+  /* 9. Mezclando diferentes técnicas */
+  /* grid-template-rows: 80px repeat(3, minmax(50px, auto)) 80px; */
+  
+  /* 10. Usando nombres de líneas personalizados (line names) */
+  /* grid-template-rows: [header-start] 80px [header-end content-start] 1fr [content-end footer-start] 60px [footer-end]; */
+  
+  /* 11. Creando un patrón de filas de altura variable */
+  grid-template-rows: [fila-1] 60px [fila-2] 100px [fila-3] 60px [fila-4] 100px;
+  
+  /* Propiedades comunes del contenedor */
+  width: 80%;
+  height: 600px; /* Altura fija para demostrar mejor grid-template-rows */
+  background-color: rgb(90, 71, 47);
+  gap: 10px; /* Espacio entre celdas */
+}
+
+.box {
+  border: 1px solid red;
+  background-color: rgb(240, 202, 154);
+  padding: 10px;
+  font-weight: bold;
+}
